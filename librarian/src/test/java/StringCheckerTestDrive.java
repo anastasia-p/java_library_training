@@ -1,9 +1,9 @@
-/**
- * Created by aponomar on 8/30/2017.
- */
+import org.testng.annotations.Test;
+
 public class StringCheckerTestDrive {
 
-    public static void main(String[] args) {
+    @Test
+    public void patternCheck() {
         StringChecker.isFieldCorrect("Pushkin", StringChecker.authorName);
         StringChecker.isFieldCorrect("A.S.Pushkin", StringChecker.authorName);
         StringChecker.isFieldCorrect("A. S. Pushkin", StringChecker.authorName);
