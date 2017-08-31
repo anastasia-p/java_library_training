@@ -2,15 +2,18 @@
  * Created by aponomar on 8/30/2017.
  */
 public class Book {
-    String author;
-    String title;
+    private String author;
+    private String title;
 
-    void setAuthor(String aAuthor) {
-        author = aAuthor;
+    void setAuthor(String author) {
+        boolean fieldCorrect = StringChecker.isFieldCorrect(author, StringChecker.authorName);
+        if (fieldCorrect == true) {
+            this.author = author;
+        }
     }
 
-    void setTitle(String aTitle) {
-        title = aTitle;
+    void setTitle(String title) {
+        this.title = title;
     }
 
     String getAuthor() {
